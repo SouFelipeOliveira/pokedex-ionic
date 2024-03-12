@@ -17,15 +17,17 @@ export class PokedexService {
   getPokemons(offset = 0): Observable<any> {
     const endpoint = `${this.url}/pokemon?offset=${offset}&limit=25`;
     return this.http.get(endpoint).pipe(
-      map((result: any) => {
-        return result['results'];
-      }), map(pokemons => {
-        return pokemons.map((poke: any, index: any) => {
-          poke.image = this.getPokeImage(index + offset + 1);
-          poke.id = index + offset + 1;
-          return poke;
-        });
-      })
+     map((response: any ) => {
+        return {
+          results: response.results.map((poke: any, index: number) => {
+            return {
+              id: index + offset + 1,
+              name: poke.name,
+              image: this.getPokeImage(index + offset + 1)
+            };
+          })
+        };
+     })
     );
   }
 
@@ -64,7 +66,7 @@ export class PokedexService {
               name: type.type.name
             };
           }),
-          abilites: details.abilities.map((abilityInfo: any) => {
+          abilities: details.abilities.map((abilityInfo: any) => {
             const abilityName = abilityInfo.ability.name;
             return this.http.get(abilityInfo.ability.url).pipe(
               map((abilityDetails: any) => {
