@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { DefaultFooterComponent } from './default-footer.component';
+import { HeaderComponent } from './header.component';
 
-describe('DefaultFooterComponent', () => {
-  let component: DefaultFooterComponent;
-  let fixture: ComponentFixture<DefaultFooterComponent>;
+describe('HeaderComponent', () => {
+  let component: HeaderComponent;
+  let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ DefaultFooterComponent ],
+      declarations: [ HeaderComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(DefaultFooterComponent);
+    fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

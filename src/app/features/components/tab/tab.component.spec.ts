@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { DefaultHeaderComponent } from './default-header.component';
+import { TabComponent } from './tab.component';
 
-describe('DefaultHeaderComponent', () => {
-  let component: DefaultHeaderComponent;
-  let fixture: ComponentFixture<DefaultHeaderComponent>;
+describe('TabComponent', () => {
+  let component: TabComponent;
+  let fixture: ComponentFixture<TabComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ DefaultHeaderComponent ],
+      declarations: [ TabComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(DefaultHeaderComponent);
+    fixture = TestBed.createComponent(TabComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

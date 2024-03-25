@@ -8,20 +8,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 
-import {
-  DefaultHeaderComponent,
-  DefaultLayoutComponent,
-  DefaultFooterComponent
-} from './containers';
-
-const CONTAINERS = [
-  DefaultHeaderComponent,
-  DefaultLayoutComponent,
-  DefaultFooterComponent
-];
-
 @NgModule({
-  declarations: [AppComponent, ...CONTAINERS],
+  declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

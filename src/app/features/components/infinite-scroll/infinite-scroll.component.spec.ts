@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { DefaultLayoutComponent } from './default-layout.component';
+import { InfiniteScrollComponent } from './infinite-scroll.component';
 
-describe('DefaultLayoutComponent', () => {
-  let component: DefaultLayoutComponent;
-  let fixture: ComponentFixture<DefaultLayoutComponent>;
+describe('InfiniteScrollComponent', () => {
+  let component: InfiniteScrollComponent;
+  let fixture: ComponentFixture<InfiniteScrollComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ DefaultLayoutComponent ],
+      declarations: [ InfiniteScrollComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(DefaultLayoutComponent);
+    fixture = TestBed.createComponent(InfiniteScrollComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
